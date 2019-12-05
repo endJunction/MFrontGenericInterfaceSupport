@@ -87,7 +87,7 @@ function(mfront_behaviours_check_library name)
       endif(${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
     endif(WIN32)
     target_link_libraries(${name}
-      PUBLIC ${TFEL_MFRONT_LIBRARIES} MTestFileGenerator)
+      PUBLIC ${TFEL_MFRONT_LIBRARIES} ${MTestFileGenerator})
   else(nb_sources GREATER 0)
     message(STATUS "No sources selected for library ${name}")
   endif(nb_sources GREATER 0)
